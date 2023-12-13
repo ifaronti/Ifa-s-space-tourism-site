@@ -225,7 +225,7 @@ nav{
 
 }
 
-@media only screen and (min-width: 521px) and (max-width: 1025px){
+@media only screen and (min-width: 521px) and (max-width: 1000px){
 
     .navLine{
         display: none;
@@ -259,6 +259,14 @@ nav{
         color: #D0D6F9;
     }
 }
+
+@media only screen and (min-width: 1001px) and (max-width: 1600px){
+    .navLine{
+        display: none;
+    }
+}
+
+
 
 @media only screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape){
     .navLink:hover{
@@ -412,7 +420,7 @@ nav{
     }
 }
 
-@media only screen and (min-width: 521px) and (max-width: 1025px){
+@media only screen and (min-width: 521px) and (max-width: 1000px){
     .home{
         width: 100vw;
         text-align: center;
@@ -471,6 +479,87 @@ nav{
         display: flex;
         right: 0;
     }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1600px){
+    .home{
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        background-image: url(/public/assets/images/homeDesktop.jpg);
+    }
+
+    .home_img{
+        display: none;
+    }
+
+    .explore{
+        position: relative;
+    }
+
+    .intro{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+    .introPs{
+        width: 500px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .space{
+        position: relative;
+        margin-top: 2.5rem;
+        margin-bottom: .5rem;
+        font-size: 10rem;
+        letter-spacing: 8px;
+        font-family: 'Bellefair';
+    }
+
+    .so_you{
+        position: relative;
+        top: 1rem;
+        font-size: 28px;
+        letter-spacing: 5px;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+    }
+
+    .face_it{
+        font-size: 18px;
+        position: relative;
+        letter-spacing: 2rem;
+        letter-spacing: 1px;
+        line-height: 32px;
+        color: #D0D6F9;
+        font-family: 'Barlow';
+    }
+
+    .explore{
+        position: relative;
+        bottom:0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 19rem;
+        height: 19rem;
+        border-radius: 100%;
+        background-color: white;
+        color: #0B0D17;
+        font-size: 32px;
+        letter-spacing: 2px;
+        font-family: 'Bellefair';
+    }
+
+    
 }
 
 @media only screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape){
@@ -858,7 +947,7 @@ nav{
     }
 }
 
-@media only screen and (min-width: 521px) and (max-width: 1025px){
+@media only screen and (min-width: 521px) and (max-width: 1000px){
     .destination{
         width: 100vw;
         overflow-x: hidden;
@@ -1000,62 +1089,51 @@ nav{
     }
 }
 
-@media only screen and (min-width: 1001px) and (max-width: 1400px){
+@media only screen and (min-width: 1001px) and (max-width: 1600px){
     .destination{
+        position: relative;
         width: 100vw;
-        overflow-x: hidden;
+        min-height: 100vh;
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
         background-image: url(/public/assets/images/destinationDesktop.jpg);
     }
-
+    
     .pick_destination{
         position: absolute;
-        top: 6rem;
-        left: 3.5rem;
-        width: 304px;
-        font-size: 16px;
+        color: white;
+        display: flex;
+        gap: .5rem;
+        top: 9rem;
+        left: 4rem;
+        font-size: 28px;
+        font-family: 'Barlow Condensed';
+        letter-spacing: 4.725px;
+        font-weight: 400;
+        z-index: 1;
     }
-
+    
+    .zero1{
+        color: #fff;
+        opacity: 0.25;
+    }
+    
     .destination_info{
         display: flex;
-        justify-content: center;
-        flex-direction: row;
-        top: 4rem;
-    }
-
-    .destination_details{
-        text-align: center;
-        left: -10.3rem;
-        top: -1rem;
+        position: relative;
+        color: white;
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: row;
-        gap: 15rem;
-        font-family: 'Barlow';
-    }
-
-    .navLine{
-        display: none;
-    }
-
-      .name_description{
-        top: 10rem;
-        left: 1.7rem;
     }
     
     .destinations{
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        font-size: 14px;
-        left: -7rem;
-        top: 1rem;
+        gap: 2rem;
+        margin-bottom: -1rem;
     }
     
     .current{
@@ -1064,68 +1142,86 @@ nav{
         cursor: pointer;
         color: #D0D6F9;
         font-family: 'Barlow Condensed';
-        font-size: 16px;
+        font-size: 19px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 2.7px;
     }
-
+    
+    .current:hover{
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: #D0D6F9;
+        text-underline-offset: 1rem;
+        color: #D0D6F9;
+    }
+    
     .theCurrent{
         text-decoration: underline;
         text-decoration-thickness: 2px;
         text-decoration-color: white;
-        text-underline-offset: .5rem;
+        text-underline-offset: 1rem;
     }
-
+    
+    .destination_details{
+        position: relative;
+        left: 0;
+        top: -11rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15vw;
+        font-family: 'Barlow';
+    }
+    
+    .name_description{
+        position: relative;
+        top: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
     
     .location_name{
-        font-size: 80px;
+        font-size: 100px;
         text-transform: uppercase;
         font-family: 'Bellefair';
         line-height: normal;
         font-style: normal;
         position: relative;
-        margin-bottom: -1rem;
+        margin-bottom: 2px;
         letter-spacing: 1px;
-        position: relative;
-        left: -6.7rem;
     }
     
     .location_description{
-        /* width: 500px; */
-        font-size: 16px;
-        line-height: 28px;
+        width: 444px;
+        font-size: 19px;
+        line-height: 40px;
         color: #D0D6F9;
         font-weight: 400;
         font-family: 'Barlow';
-        margin-bottom: 1rem;
-        position: relative;
-        text-align: center;
-        left: -2.8rem;
+        margin-bottom: 3rem;
     }
     
     .time_distance{
         display: flex;
-        flex-direction: row;
         justify-content: center;
-        align-items: center;
-        gap: 8rem;
-        position: relative;
-        left: -6.7rem;
+        gap: 6rem;
     }
     
     .location_image{
         position: relative;
-        left: 35rem;
-        top: -14rem;
-        width: 250px;
-        height: 250px;
+        top: 2rem;
+        /* left: -7rem; */
+        width: 25rem;
+        height: 25rem;
     }
     
     .details_line{
-        width: 573px;
-        left: -6.7rem;
+        position: relative;
+        width: 444px;
+        height: 1px;
+        background-color: #383b4b;
     }
     
     .avg_time{
@@ -1136,12 +1232,13 @@ nav{
         font-weight: 400;
         line-height: normal;
         letter-spacing: 2.362px;
+        margin-bottom: -1rem;
     }
     
     .avgTime_values{
         color: #FFF;
         font-family: 'Bellefair';
-        font-size: 28px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -1405,12 +1502,12 @@ nav{
     }
 }
 
-@media only screen and (min-width: 521px) and (max-width: 1025px){
+@media only screen and (min-width: 521px) and (max-width: 1149px){
     .crew{
         width: 100vw;
         overflow-x: hidden;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         justify-content: center;
         background-image: url(/public/assets/images/crewDesktop.jpg);
     }
@@ -1496,93 +1593,136 @@ nav{
     }
 }
 
-@media only screen and (min-width: 1001px) and (max-width: 1600px){
+@media only screen and (min-width: 1150px) and (max-width: 1600px){
     .crew{
+        position: absolute;
         width: 100vw;
-        overflow-x: hidden;
-        align-items: center;
-        height: 100vh;
+        min-height: 100%;
+        overflow: hidden;
+        display: flex;
         justify-content: center;
-        background-image: url(/public/assets/images/crewDesktop.jpg);
+        align-items: center;
     }
-
+    
     .meet_crew{
-        position: relative;
-        justify-content: left;
-        text-align: center;
+        position: absolute;
+        color: white;
+        display: flex;
+        z-index: 1;
+        justify-content: center;
         left: 3rem;
-        top: 10rem;
-        font-size: 19px;
+        top: 14rem;
+        gap: .5rem;
+        font-size: 28px;
+        font-family: 'Barlow Condensed';
+        letter-spacing: 4.725px;
+        font-weight: 400;
     }
-
+    
+    .crew_info{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 10rem;
+        color: white;
+    }
+    
+    .crew_details{
+        position: relative;
+        top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Barlow';
+    }
+    
     .crew_info{
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 16rem;
+        position: relative;
+        top: 0rem;
+        color: white;
     }
-
-    .crew_details{
-        display: flex;
-        align-items: center;
-        text-align: center;
-        top: 13rem;
-    }
-
+    
     .crew_description{
-        text-align: center;
-        left: 0;
+        position: relative;
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        top: -12rem;
+        left: 0rem;
+        top: 2rem;
     }
-
+    
+    .role{
+        color: #D0D6F9;
+        font-family: 'Bellefair';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: -2rem;
+    }
+    
+    .crew_name{
+        color: #FFF;
+        font-family: 'Bellefair';
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        width: 650px;
+    }
+    
+    .crew_bio{
+        color: #D0D6F9;
+        font-family: 'Barlow';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 177.778% */
+        width: 444px;
+        height: 128px;
+        margin-bottom: 3rem;
+    }
+    
     .crew_btn{
         position: relative;
-        top: -2.5rem;
-        left: -.2;
-    }
-
-    .role_bio_name{
-        position: relative;
-        text-align: center;
-        top: -1rem;
-
-    }
-
-    .role{
-        position: relative;
-        left: 0;
-        top: -1.8rem;
-        font-size: 16px;
-    }
-
-    .crew_name{
-        position:relative;
-        left: 0;
-        font-size: 24px;
-        margin-bottom: 2rem;
-    }
-
-    .crew_bio{
-        width: 327px;
-        font-size: 15px;
-        line-height: 25px;
-        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        left: 10rem;
+        gap: 2rem;
+        margin-bottom: -1rem;
     }
-
+    
+    .crew_dot{
+        height: 1rem;
+        width: 1rem;
+        border: .5px solid rgb(59, 59, 59);
+        border-radius: 100%;
+        background-color: rgb(85, 85, 85);
+        cursor: pointer;
+        flex-shrink: 0;
+        opacity: .5;
+    }
+    
+    .crew_dot:hover{
+        background-color: rgb(208, 207, 207);
+    }
+    
+    .theDot{
+        background-color: white;
+        opacity: 1;
+    }
+    
     .crew_image{
-        position: absolute;
-        top: 8rem;
-        height: 300px;
-        width: 300px;
-        left: 12rem;
+        position: relative;
+        left: 0;
+        width: 25rem;
+        height: 25rem;
     }
-
+    
     .crew_mobile_line{
         display: none;
     }
@@ -1772,7 +1912,7 @@ nav{
     }
 }
 
-@media only screen and (min-width: 521px) and (max-width: 1100px){
+@media only screen and (min-width: 521px) and (max-width: 1000px){
     .tech_page{
         background-image: url(/public/assets/images/techDesktop.jpg);
         align-items: center;

@@ -14,7 +14,7 @@ export default function Home(){
                 </div>
             </div>
             <div className="exploreDiv">
-                <div className="explore"><p>EXPLORE</p></div>
+                <p className="explore"><p>EXPLORE</p></p>
             </div>
         </div>
     )

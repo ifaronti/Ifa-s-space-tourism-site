@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dba905c3.css",
+    "main.js": "/static/js/main.50512201.js",
+    "static/media/Barlow-Light.ttf": "/static/media/Barlow-Light.19f244ecb11218b9a7de.ttf",
+    "static/media/BarlowCondensed-Light.ttf": "/static/media/BarlowCondensed-Light.3ba02bbdeb04e17f34bf.ttf",
+    "static/media/homeDesktop.jpg": "/static/media/homeDesktop.cdf3864ecbfdf20e8c3b.jpg",
+    "static/media/destinationDesktop.jpg": "/static/media/destinationDesktop.468b922c69bf5499b4bc.jpg",
+    "static/media/Bellefair-Regular.ttf": "/static/media/Bellefair-Regular.6b84d927d5ad108e909a.ttf",
+    "static/media/background-home-tablet.jpg": "/static/media/background-home-tablet.bc9efcc3281fa6801077.jpg",
+    "static/media/crewDesktop.jpg": "/static/media/crewDesktop.88a3c692fd34eb311e04.jpg",
+    "static/media/background-destination-tablet.jpg": "/static/media/background-destination-tablet.8f55d346d8b6cfd95ab7.jpg",
+    "static/media/techDesktop.jpg": "/static/media/techDesktop.b7b589b3c0c5ef0811d4.jpg",
+    "static/media/background-crew-tablet.jpg": "/static/media/background-crew-tablet.16d51cf61e98ce45eb61.jpg",
+    "static/media/background-technology-tablet.jpg": "/static/media/background-technology-tablet.48c38b028217ee0096c4.jpg",
+    "index.html": "/index.html",
+    "main.dba905c3.css.map": "/static/css/main.dba905c3.css.map",
+    "main.50512201.js.map": "/static/js/main.50512201.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dba905c3.css",
+    "static/js/main.50512201.js"
+  ]
+}
