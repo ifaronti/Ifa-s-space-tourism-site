@@ -1,0 +1,1944 @@
+@font-face{
+    font-family: 'Barlow';
+    src: url(components/fonts/Barlow/Barlow-Light.ttf);
+
+}
+@font-face{
+    font-family: 'Barlow Condensed';
+    src: url(components/fonts/Barlow_Condensed/BarlowCondensed-Light.ttf);
+}
+
+@font-face{
+    font-family: 'Bellefair';
+    src: url(components/fonts/Bellefair/Bellefair-Regular.ttf)
+}
+
+:root{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: -.5rem;
+    overflow-x: hidden;
+}
+
+.app{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 900px;
+}
+
+@media only screen and (max-width: 520px){
+:root{
+    overflow-x: hidden;
+}
+
+    .container{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .app{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 1025px){
+    .container{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .app{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}
+
+/*********************************** NavBar.js start ********************************************************/
+
+nav{
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    z-index: 2;
+    color: white;
+    font-family: 'Barlow Condensed';
+}
+
+.navItems{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tripple_whopper{
+    z-index: 9;
+}
+
+.nav_links{
+    position: absolute;
+    text-align: center;
+    right: 0;
+    width: 54vw;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    z-index: 5;
+}
+
+.navLink{
+    position: relative;
+    letter-spacing: 2.7px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Barlow Condensed';
+    z-index: 15;
+}
+
+.navLink:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #D0D6F9;
+    text-underline-offset: 2.3rem;
+    color: #D0D6F9;
+}
+
+.currentLink{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: white;
+    text-underline-offset: 2.3rem;
+}
+
+.navLine{
+    position: absolute;
+    left: 14rem;
+    display: flex;
+    width: 36vw;
+    height: 1px;
+    background-color: rgb(69, 69, 90);
+    z-index: 55;
+}
+
+.logoDiv{
+    position: absolute;
+    left: 3rem;
+    height: 5rem;
+}
+
+.wendys{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    right: 2rem;
+    top: -5.5rem;
+}
+
+.burger{
+    position: relative;
+    width: 1.7rem;
+    height: 2px;
+    margin-bottom: 8px;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+@media only screen and (max-width: 520px){
+    .navLine{
+        display: none;
+    }
+
+    .nav_links{
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .wendys{
+        display: flex;
+        z-index: 20;
+        top: -2.2rem;
+    }
+
+    .logoDiv{
+        height: 3rem;
+        top: -3rem;
+        left: 2rem;
+    }
+
+    .tripple_whopper :nth-child(2){
+        opacity: 0;
+    }
+
+    .tripple_whopper :nth-child(1){
+        transform: translateY( 15px) rotate(-45deg);
+    }
+
+    .tripple_whopper :nth-child(3){
+        transform: translateY(-5px) rotate(45deg);
+    }
+
+    .mobile_nav{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 15rem;
+        align-items: flex-start;
+        gap: 1rem;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+    }
+
+    .navLink{
+        top: 10rem;
+        left: 2rem;
+    }
+    
+    .currentLink{
+        text-underline-offset: 10px;
+    }
+
+    .navLink:hover{
+        text-decoration: none;
+    }
+
+}
+
+@media only screen and (min-width: 521px) and (max-width: 1025px){
+
+    .navLine{
+        display: none;
+    }
+
+    .logoDiv{
+        height: 3.5rem;
+        top: -4rem;
+    }
+
+    .nav_links{
+        top: -5rem;
+        width: 70vw;
+        height: 70px;
+        gap: 0;
+        font-size: 12px;
+    }
+
+    .navLink{
+        margin-right: 1rem;
+        text-decoration: none;
+    }
+
+    .navLink:hover{
+        text-decoration: none;
+        color: #D0D6F9;
+    }
+    
+    .currentLink{
+        text-underline-offset: 10px;
+        color: #D0D6F9;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape){
+    .navLink:hover{
+        text-decoration: none;
+        color: #D0D6F9;
+    }
+
+    .currentLink{
+        text-decoration: underline;
+    }
+    
+    .currentLink{
+        text-underline-offset: .5rem;
+        color: #D0D6F9;
+    }
+}
+
+/*********************************** NavBar.js end ***************************************************************/
+
+/*********************************** Home.js start *************************************************************/
+
+.home{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.home_img{
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.intro{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.introPs{
+    width: 500px;
+    position: relative;
+    top: 25rem;
+    left: -30.5rem;
+}
+
+.space{
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: .5rem;
+    font-size: 10rem;
+    letter-spacing: 8px;
+    font-family: 'Bellefair';
+}
+
+.so_you{
+    position: relative;
+    top: 1rem;
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed';
+}
+
+.face_it{
+    font-size: 18px;
+    position: relative;
+    letter-spacing: 2rem;
+    letter-spacing: 1px;
+    line-height: 32px;
+    color: #D0D6F9;
+    font-family: 'Barlow';
+}
+
+.explore{
+    position: absolute;
+    bottom: 9rem;
+    right: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19rem;
+    height: 19rem;
+    border-radius: 100%;
+    background-color: white;
+    color: #0B0D17;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-family: 'Bellefair';
+}
+
+@media only screen and (max-width: 520px){
+    .home{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/public/assets/images/background-home-tablet.jpg);
+    }
+
+    .home_img{
+        display: none;
+    }
+
+    .intro{
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        margin-top: -9rem;
+    }
+
+    .introPs{
+        width: 327px;
+        text-align: center;
+        position: relative;
+        top: -4rem;
+        left: 0;
+    }
+
+    .face_it{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .so_you{
+        font-size: 16px;
+    }
+
+    .space{
+        width: 327px;
+        font-size: 80px;
+    }
+
+    .exploreDiv{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+
+    .explore{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        top: 14rem;
+        font-size: 16px;
+        display: flex;
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 1025px){
+    .home{
+        width: 100vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/public/assets/images/background-home-tablet.jpg);
+    }
+
+    .home_img{
+        display: none;
+    }
+
+    .intro{
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        margin-top: -9rem;
+    }
+
+    .introPs{
+        width: 327px;
+        text-align: center;
+        position: relative;
+        top: -4rem;
+        left: 0;
+    }
+
+    .face_it{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .so_you{
+        font-size: 16px;
+    }
+
+    .space{
+        width: 327px;
+        font-size: 80px;
+    }
+
+    .exploreDiv{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+
+    .explore{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        top: 14rem;
+        font-size: 16px;
+        display: flex;
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape){
+    .home{
+        width: 100vw;
+        text-align: center;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/public/assets/images/homeDesktop.jpg);
+    }
+
+    .home_img{
+        display: none;
+    }
+
+    .intro{
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        margin-top: -9rem;
+    }
+
+    .introPs{
+        width: 327px;
+        text-align: center;
+        position: relative;
+        top: -4rem;
+        left: 0;
+    }
+
+    .face_it{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .so_you{
+        font-size: 16px;
+    }
+
+    .space{
+        width: 327px;
+        font-size: 80px;
+    }
+
+    .exploreDiv{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+
+    .explore{
+        position: relative;
+        width: 215px;
+        height: 215px;
+        top: 14rem;
+        font-size: 16px;
+        display: flex;
+        right: 0;
+    }
+}
+
+/*********************************** Home.js end ***************************************************************/
+
+/*********************************** Destination.js start ***************************************************************/
+
+.destination{
+    position: relative;
+    width: 100vw;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.pick_destination{
+    position: absolute;
+    color: white;
+    display: flex;
+    gap: .5rem;
+    top: 13rem;
+    left: 14rem;
+    font-size: 28px;
+    font-family: 'Barlow Condensed';
+    letter-spacing: 4.725px;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.zero1{
+    color: #fff;
+    opacity: 0.25;
+}
+
+.destination_info{
+    display: flex;
+    position: relative;
+    top: 15rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.destinations{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: -1rem;
+}
+
+.current{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed';
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+}
+
+.current:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #D0D6F9;
+    text-underline-offset: 1rem;
+    color: #D0D6F9;
+}
+
+.theCurrent{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: white;
+    text-underline-offset: 1rem;
+}
+
+.destination_details{
+    position: relative;
+    left: 0;
+    top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+    font-family: 'Barlow';
+}
+
+.name_description{
+    position: relative;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.location_name{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: 'Bellefair';
+    line-height: normal;
+    font-style: normal;
+    position: relative;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+}
+
+.location_description{
+    width: 444px;
+    font-size: 19px;
+    line-height: 40px;
+    color: #D0D6F9;
+    font-weight: 400;
+    font-family: 'Barlow';
+    margin-bottom: 3rem;
+}
+
+.time_distance{
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+@keyframes spinLocation{
+    /* 1%{
+        transform: rotate(0deg);
+        animation-timing-function: ease-in;
+    } */
+    /* 25%{
+        transform: rotate(80deg) ;
+        animation-timing-function: ease-in;
+    } */
+
+    /* if the above values are used, it'll cause pauses between rotations
+    just a note for when the pauses may be needed */
+
+    100%{
+        transform: rotate(360deg);
+       animation-iteration-count: infinite;
+    }
+}
+
+.location_image{
+    position: relative;
+    top: 2rem;
+    /* left: -7rem; */
+    width: 30rem;
+    height: 30rem;
+    -webkit-animation: spinLocation 11s steps(10000) infinite;
+    -moz-animation: spinLocation 11s steps(10000) infinite;
+     -ms-animation: spinLocation 11s steps(10000) infinite;
+      -o-animation: spinLocation 11s steps(10000) infinite;
+}
+
+.details_line{
+    position: relative;
+    width: 444px;
+    height: 1px;
+    background-color: #383b4b;
+}
+
+.avg_time{
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+    margin-bottom: -1rem;
+}
+
+.avgTime_values{
+    color: #FFF;
+    font-family: 'Bellefair';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 520px){
+    .destination{
+        width: 100vw;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(/public/assets/images/background-destination-tablet.jpg);
+    }
+
+    .pick_destination{
+        position: absolute;
+        top: 7rem;
+        left: 3.5rem;
+        width: 304px;
+        font-size: 16px;
+    }
+
+    .destination_info{
+        display: flex;
+        justify-content: center;
+        top: 4rem;
+    }
+
+    .destination_details{
+        text-align: center;
+        left: -9rem;
+        top: -2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15rem;
+        font-family: 'Barlow';
+    }
+
+      .name_description{
+        top: 10rem;
+        left: 1.7rem;
+    }
+    
+    .destinations{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 14px;
+        left: -6.3rem;
+    }
+    
+    .current{
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .theCurrent{
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: white;
+        text-underline-offset: .5rem;
+    }
+
+    
+    .location_name{
+        font-size: 56px;
+        text-transform: uppercase;
+        font-family: 'Bellefair';
+        line-height: normal;
+        font-style: normal;
+        position: relative;
+        margin-bottom: -1rem;
+        letter-spacing: 1px;
+        position: relative;
+        left: -6.7rem;
+    }
+    
+    .location_description{
+        width: 327px;
+        font-size: 15px;
+        line-height: 25px;
+        color: #D0D6F9;
+        font-weight: 400;
+        font-family: 'Barlow';
+        margin-bottom: 1rem;
+        position: relative;
+        left: -6.5rem;
+    }
+    
+    .time_distance{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+        left: -6.7rem;
+        top: 1rem;
+    }
+    
+    .location_image{
+        position: relative;
+        left: 26.7rem;
+        top: -12rem;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .details_line{
+        width: 327px;
+        left: -6.7rem;
+        top: 1rem;
+    }
+    
+    .avg_time{
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.362px;
+        margin-bottom: -1rem;
+    }
+    
+    .avgTime_values{
+        color: #FFF;
+        font-family: 'Bellefair';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .est_time{
+        margin-top: -1.5rem;
+    }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 1025px){
+    .destination{
+        width: 100vw;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(/public/assets/images/destinationDesktop.jpg);
+    }
+
+    .pick_destination{
+        position: absolute;
+        top: 6rem;
+        left: 3.5rem;
+        width: 304px;
+        font-size: 16px;
+    }
+
+    .destination_info{
+        display: flex;
+        justify-content: center;
+        top: 4rem;
+    }
+
+    .destination_details{
+        text-align: center;
+        left: -10.3rem;
+        top: -1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15rem;
+        font-family: 'Barlow';
+    }
+
+      .name_description{
+        top: 10rem;
+        left: 1.7rem;
+    }
+    
+    .destinations{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 14px;
+        left: -7rem;
+        top: 1rem;
+    }
+    
+    .current{
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .theCurrent{
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: white;
+        text-underline-offset: .5rem;
+    }
+
+    
+    .location_name{
+        font-size: 80px;
+        text-transform: uppercase;
+        font-family: 'Bellefair';
+        line-height: normal;
+        font-style: normal;
+        position: relative;
+        margin-bottom: -1rem;
+        letter-spacing: 1px;
+        position: relative;
+        left: -6.7rem;
+    }
+    
+    .location_description{
+        /* width: 500px; */
+        font-size: 16px;
+        line-height: 28px;
+        color: #D0D6F9;
+        font-weight: 400;
+        font-family: 'Barlow';
+        margin-bottom: 1rem;
+        position: relative;
+        text-align: center;
+        left: -2.8rem;
+    }
+    
+    .time_distance{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        position: relative;
+        left: -6.7rem;
+    }
+    
+    .location_image{
+        position: relative;
+        left: 35rem;
+        top: -12rem;
+        width: 250px;
+        height: 250px;
+    }
+    
+    .details_line{
+        width: 573px;
+        left: -6.7rem;
+    }
+    
+    .avg_time{
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.362px;
+    }
+    
+    .avgTime_values{
+        color: #FFF;
+        font-family: 'Bellefair';
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1400px){
+    .destination{
+        width: 100vw;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-image: url(/public/assets/images/destinationDesktop.jpg);
+    }
+
+    .pick_destination{
+        position: absolute;
+        top: 6rem;
+        left: 3.5rem;
+        width: 304px;
+        font-size: 16px;
+    }
+
+    .destination_info{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        top: 4rem;
+    }
+
+    .destination_details{
+        text-align: center;
+        left: -10.3rem;
+        top: -1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 15rem;
+        font-family: 'Barlow';
+    }
+
+    .navLine{
+        display: none;
+    }
+
+      .name_description{
+        top: 10rem;
+        left: 1.7rem;
+    }
+    
+    .destinations{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 14px;
+        left: -7rem;
+        top: 1rem;
+    }
+    
+    .current{
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+    }
+
+    .theCurrent{
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: white;
+        text-underline-offset: .5rem;
+    }
+
+    
+    .location_name{
+        font-size: 80px;
+        text-transform: uppercase;
+        font-family: 'Bellefair';
+        line-height: normal;
+        font-style: normal;
+        position: relative;
+        margin-bottom: -1rem;
+        letter-spacing: 1px;
+        position: relative;
+        left: -6.7rem;
+    }
+    
+    .location_description{
+        /* width: 500px; */
+        font-size: 16px;
+        line-height: 28px;
+        color: #D0D6F9;
+        font-weight: 400;
+        font-family: 'Barlow';
+        margin-bottom: 1rem;
+        position: relative;
+        text-align: center;
+        left: -2.8rem;
+    }
+    
+    .time_distance{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        position: relative;
+        left: -6.7rem;
+    }
+    
+    .location_image{
+        position: relative;
+        left: 35rem;
+        top: -14rem;
+        width: 250px;
+        height: 250px;
+    }
+    
+    .details_line{
+        width: 573px;
+        left: -6.7rem;
+    }
+    
+    .avg_time{
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.362px;
+    }
+    
+    .avgTime_values{
+        color: #FFF;
+        font-family: 'Bellefair';
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape){
+    .time_distance{
+        top: 1rem;
+    }
+
+    .details_line{
+        top: 1rem;
+    }
+
+    .location_image{
+        top: -13rem;
+    }
+
+    .destinations{
+        top: -1.5rem;
+        font-size: 1rem;
+    }
+
+    .location_name{
+        top: -1rem;
+    }
+}
+
+/*********************************** Destination.js end ***************************************************************/
+
+/*********************************** Crew.js start ***************************************************************/
+
+.crew{
+    position: absolute;
+    width: 100vw;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.meet_crew{
+    position: absolute;
+    color: white;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    left: 14rem;
+    top: 14rem;
+    gap: .5rem;
+    font-size: 28px;
+    font-family: 'Barlow Condensed';
+    letter-spacing: 4.725px;
+    font-weight: 400;
+}
+
+.crew_info{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 10rem;
+    color: white;
+}
+
+.crew_details{
+    position: relative;
+    top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow';
+}
+
+.crew_info{
+    display: flex;
+    position: relative;
+    top: 10rem;
+    color: white;
+}
+
+.crew_description{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: -4.7rem;
+    top: 2rem;
+}
+
+.role{
+    color: #D0D6F9;
+    font-family: 'Bellefair';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: -2rem;
+}
+
+.crew_name{
+    color: #FFF;
+    font-family: 'Bellefair';
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    width: 650px;
+}
+
+.crew_bio{
+    color: #D0D6F9;
+    font-family: 'Barlow';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
+    width: 444px;
+    height: 128px;
+    margin-bottom: 5rem;
+}
+
+.crew_btn{
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: -1rem;
+}
+
+.crew_dot{
+    height: 1rem;
+    width: 1rem;
+    border: .5px solid rgb(59, 59, 59);
+    border-radius: 100%;
+    background-color: rgb(85, 85, 85);
+    cursor: pointer;
+    flex-shrink: 0;
+    opacity: .5;
+}
+
+.crew_dot:hover{
+    background-color: rgb(208, 207, 207);
+}
+
+.theDot{
+    background-color: white;
+    opacity: 1;
+}
+
+.crew_image{
+    position: relative;
+    left: 4rem;
+    width: 42rem;
+    height: 46rem;
+}
+
+.crew_mobile_line{
+    display: none;
+}
+
+@media only screen and (max-width: 520px){
+    .crew{
+        width: 100vw;
+        overflow-x: hidden;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        background-image: url(/public/assets/images/background-crew-tablet.jpg);
+    }
+
+    .meet_crew{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top: 9rem;
+        /* width: 304px; */
+        font-size: 16px;
+    }
+
+    .crew_info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 18rem;
+    }
+
+    .crew_details{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .crew_description{
+        text-align: center;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        top: 7rem;
+    }
+
+    .crew_description :nth-child(1){
+        order: 2;
+    }
+
+    .crew_btn{
+        position: relative;
+        top: -1.5rem;
+        left: 0;
+    }
+
+    .role_bio_name{
+        position: relative;
+        text-align: center;
+        top: 4rem;
+
+    }
+
+    .role{
+        position: relative;
+        left: 0;
+        top: -1.8rem;
+        font-size: 16px;
+    }
+
+    .crew_name{
+        position:relative;
+        top: 1rem;
+        left: 0;
+        font-size: 24px;
+        margin-bottom: -1rem;
+    }
+
+    .crew_bio{
+        width: 327px;
+        font-size: 15px;
+        line-height: 25px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 10rem;
+        top: 2rem;
+    }
+
+    .crew_image{
+        position: absolute;
+        height: 222px;
+        width: 177px;
+        top: -11rem;
+        left: 15rem;
+    }
+
+    .crew_mobile_line{
+        display: block;
+        position: absolute;
+        width: 327px;
+        height: 1px;
+        background-color: #383B4B;
+        top: 2.9rem;
+    }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 1025px){
+    .crew{
+        width: 100vw;
+        overflow-x: hidden;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        background-image: url(/public/assets/images/crewDesktop.jpg);
+    }
+
+    .meet_crew{
+        position: relative;
+        justify-content: left;
+        text-align: center;
+        left: 3rem;
+        top: 5rem;
+        font-size: 16px;
+    }
+
+    .crew_info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 16rem;
+    }
+
+    .crew_details{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .crew_description{
+        text-align: center;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        top: -12rem;
+    }
+
+    .crew_btn{
+        position: relative;
+        top: -2.5rem;
+        left: -.2;
+    }
+
+    .role_bio_name{
+        position: relative;
+        text-align: center;
+        top: -1rem;
+
+    }
+
+    .role{
+        position: relative;
+        left: 0;
+        top: -1.8rem;
+        font-size: 16px;
+    }
+
+    .crew_name{
+        position:relative;
+        left: 0;
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+
+    .crew_bio{
+        width: 327px;
+        font-size: 15px;
+        line-height: 25px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 10rem;
+    }
+
+    .crew_image{
+        position: absolute;
+        top: 8rem;
+        height: 300px;
+        width: 300px;
+        left: 12rem;
+    }
+
+    .crew_mobile_line{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1600px){
+    .crew{
+        width: 100vw;
+        overflow-x: hidden;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        background-image: url(/public/assets/images/crewDesktop.jpg);
+    }
+
+    .meet_crew{
+        position: relative;
+        justify-content: left;
+        text-align: center;
+        left: 3rem;
+        top: 10rem;
+        font-size: 19px;
+    }
+
+    .crew_info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 16rem;
+    }
+
+    .crew_details{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        top: 13rem;
+    }
+
+    .crew_description{
+        text-align: center;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        top: -12rem;
+    }
+
+    .crew_btn{
+        position: relative;
+        top: -2.5rem;
+        left: -.2;
+    }
+
+    .role_bio_name{
+        position: relative;
+        text-align: center;
+        top: -1rem;
+
+    }
+
+    .role{
+        position: relative;
+        left: 0;
+        top: -1.8rem;
+        font-size: 16px;
+    }
+
+    .crew_name{
+        position:relative;
+        left: 0;
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+
+    .crew_bio{
+        width: 327px;
+        font-size: 15px;
+        line-height: 25px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 10rem;
+    }
+
+    .crew_image{
+        position: absolute;
+        top: 8rem;
+        height: 300px;
+        width: 300px;
+        left: 12rem;
+    }
+
+    .crew_mobile_line{
+        display: none;
+    }
+}
+
+/*********************************** Crew.js end ***************************************************************/
+
+/*********************************** Technology.js start ***************************************************************/
+
+.tech_page{
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tech_info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.technology{
+    position: relative;
+    left: 0;
+    top: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow';
+    gap: 17.9rem;
+}
+
+.techs{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-direction: column;
+    margin-right: -13rem;
+    margin-left: 15rem;
+}
+
+.tech_dot{
+    text-align: center;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border: .5px solid rgb(53, 53, 53);
+    border-radius: 100%;
+    background:none;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.tech_dot:hover{
+    border-color: white;
+}
+
+.techD{
+    background-color: white;
+    color: black;
+}
+
+.tech_description{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 7rem;
+}
+
+.terminology{
+    position: relative;
+    width: 327px;
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+    margin-bottom: -2rem;
+}
+
+.tech_name{
+    color: #FFF;
+    font-family: 'Bellefair';
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    width: 532px;
+}
+
+.tech_details{
+    color: #D0D6F9;
+    font-family: 'Barlow';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    width: 444px;
+    height: 192px;
+    margin-top: -5px;
+    position: relative;
+}
+
+.tech_image{
+    position: relative;
+    width: 40rem;
+    height: 500px;
+}
+
+@media only screen and (max-width: 520px){
+    .tech_page{
+        background-image: url(/public/assets/images/background-technology-tablet.jpg);
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .tech_info{
+        align-items: center;
+        top: 1rem;
+    }
+
+    .technology{
+        flex-direction: column;
+        align-items: center;
+        top: 6rem;
+    }
+
+    .techs{
+        flex-direction: row;
+        margin: 0;
+        position: absolute;
+        top: 3rem;
+    }
+
+    .tech_dot{
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .tech_description{
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        margin: 0;
+        top: 10rem;
+    }
+
+    .terminology{
+        text-align: center;
+        margin: 0;
+        top: -2rem;
+    }
+
+    .tech_name{
+        text-align: center;
+        width: 327;
+        position: relative;
+        font-size: 24px;
+        top: -1rem;
+    }
+
+    .tech_details{
+        text-align: center;
+        font-size: 15px;
+        width: 327px;
+        margin: 0;
+    }
+
+    .tech_image{
+        position: absolute;
+        top: -11rem;
+        width: 100vw;
+        height: 12rem;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 1100px){
+    .tech_page{
+        background-image: url(/public/assets/images/techDesktop.jpg);
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .tech_info{
+        align-items: center;
+    }
+
+    .tech_intro{
+        display: flex;
+        justify-content: left;
+        left: 2rem;
+        top: 6rem;
+    }
+
+    .technology{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .techs{
+        flex-direction: row;
+        margin: 0;
+        position: absolute;
+        top: 8rem;
+        margin: 0;
+    }
+
+    .tech_dot{
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .tech_description{
+        align-items: center;
+        top: 13rem;
+        margin: 0;
+    }
+
+    .terminology{
+        text-align: center;
+        margin: 0;
+    }
+
+    .tech_name{
+        text-align: center;
+        width: 327;
+        font-size: 24px;
+        margin: 1rem 0;
+    }
+
+    .tech_details{
+        text-align: center;
+        font-size: 16px;
+        width: 458px;
+        line-height: 28px;
+        margin: 0;
+    }
+
+    .tech_image{
+        position: absolute;
+        top: -10rem;
+        width: 100vw;
+        height: 32vh;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1600px){
+    .tech_page{
+        background-image: url(/public/assets/images/techDesktop.jpg);
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .tech_info{
+        align-items: center;
+        top: 5rem;
+    }
+
+    .tech_intro{
+        display: flex;
+        justify-content: center;
+        left: 4rem;
+        top: 8rem;
+    }
+
+    .technology{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .techs{
+        flex-direction: row;
+        margin: 0;
+        position: absolute;
+        top: 8rem;
+        margin: 0;
+    }
+
+    .tech_dot{
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .tech_description{
+        align-items: center;
+        top: 13rem;
+        margin: 0;
+    }
+
+    .terminology{
+        text-align: center;
+        margin: 0;
+    }
+
+    .tech_name{
+        text-align: center;
+        width: 327;
+        font-size: 24px;
+        margin: 1rem 0;
+    }
+
+    .tech_details{
+        text-align: center;
+        font-size: 16px;
+        width: 458px;
+        line-height: 28px;
+        margin: 0;
+    }
+
+    .tech_image{
+        position: absolute;
+        top: -15rem;
+        width: 700px;
+        height: 300px;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape){
+    .tech_image{
+        height: 18rem;
+    }
+
+    .techs{
+        top: 10rem;
+        margin: 0;
+    }
+
+    .tech_description{
+        top: 16rem;
+        margin: 0;
+    }
+
+    .terminology{
+        top: -1rem;
+    }
+
+    .tech_details{
+        top: .5rem;
+    }
+}
+
+/*********************************** Technology.js end ***************************************************************/
