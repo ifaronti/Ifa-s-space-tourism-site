@@ -24,11 +24,11 @@
 .container{
     position: relative;
     width: 100vw;
+    max-width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     margin-top: -.5rem;
-    overflow-x: hidden;
 }
 
 .app{
@@ -36,35 +36,32 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    max-width: 100%;
     overflow-x: hidden;
     min-height: 900px;
 }
 
 @media only screen and (max-width: 520px){
-:root{
-    overflow-x: hidden;
-}
-
     .container{
         width: 100vw;
-        overflow-x: hidden;
+        max-width: 100%;
     }
 
     .app{
         width: 100vw;
-        overflow-x: hidden;
+        max-width: 100%;
     }
 }
 
 @media only screen and (min-width: 521px) and (max-width: 1025px){
     .container{
         width: 100vw;
-        overflow-x: hidden;
+        max-width: 100%;
     }
 
     .app{
         width: 100vw;
-        overflow-x: hidden;
+        max-width: 100%;
     }
 }
 
@@ -1507,7 +1504,7 @@ nav{
         width: 100vw;
         overflow-x: hidden;
         align-items: center;
-        min-height: 100vh;
+        min-height: 900px;
         justify-content: center;
         background-image: url(/public/assets/images/crewDesktop.jpg);
     }
@@ -1735,10 +1732,10 @@ nav{
 .tech_page{
     position: relative;
     width: 100vw;
+    max-width: 100%;
     min-height: 100%;
     display: flex;
     justify-content: center;
-    overflow: hidden;
 }
 
 .tech_info{
@@ -1847,7 +1844,6 @@ nav{
     .tech_page{
         background-image: url(/public/assets/images/background-technology-tablet.jpg);
         align-items: center;
-        overflow-y: visible;
     }
 
     .tech_info{
@@ -1917,9 +1913,8 @@ nav{
     .tech_page{
         position: relative;
         width: 100%;
-        min-height: 150vh;
+        min-height: 1000px;
         display: flex;
-        overflow-y: visible;
         justify-content: center;
         align-items: center;
         background-image: url(/public/assets/images/techDesktop.jpg);
@@ -1933,8 +1928,9 @@ nav{
     .technology{
         position: relative;
         width:100%;
+        min-height: 100vh;
         left: 0;
-        top: 1rem;
+        top: 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2022,28 +2018,19 @@ nav{
     }
     
     .tech_name{
-        color: #FFF;
-        font-family: 'Bellefair';
-        font-size: 56px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        width: 532px;
-    }
-    
-    .tech_details{
-        color: #D0D6F9;
-        font-family: 'Barlow';
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px;
-        width: 444px;
-        height: 192px;
-        margin-top: -5px;
+        text-align: center;
+        width: 327;
         position: relative;
+        font-size: 24px;
+        top: -1rem;
+    }
+
+    .tech_details{
+        text-align: center;
+        font-size: 15px;
+        width: 327px;
+        margin: 0;
+        margin-top: -1rem;
     }
     
     .tech_image{
@@ -2061,7 +2048,6 @@ nav{
         min-height: 150vh;
         display: flex;
         justify-content: center;
-        overflow-y: visible;
     }
     
     .tech_info{
@@ -2180,7 +2166,7 @@ nav{
     .tech_page{
         position: relative;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
