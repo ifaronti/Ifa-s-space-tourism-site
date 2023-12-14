@@ -15,10 +15,10 @@
 
 :root{
     box-sizing: border-box;
-    overflow-x: hidden;
     display: flex;
     background-color: black;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .container{
@@ -1275,7 +1275,7 @@ nav{
 .crew{
     position: absolute;
     width: 100vw;
-    min-height: 100%;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -1544,7 +1544,7 @@ nav{
 
     .crew_btn{
         position: relative;
-        top: -2.5rem;
+        top: -3.5rem;
         left: -.2;
     }
 
@@ -1566,7 +1566,7 @@ nav{
         position:relative;
         left: 0;
         font-size: 24px;
-        margin-bottom: 2rem;
+        /* margin-bottom: 1rem; */
     }
 
     .crew_bio{
@@ -1582,7 +1582,7 @@ nav{
 
     .crew_image{
         position: absolute;
-        top: 8rem;
+        top: 5rem;
         height: 300px;
         width: 300px;
         left: 12rem;
@@ -1735,10 +1735,10 @@ nav{
 .tech_page{
     position: relative;
     width: 100vw;
-    overflow: hidden;
     min-height: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .tech_info{
@@ -1847,7 +1847,7 @@ nav{
     .tech_page{
         background-image: url(/public/assets/images/background-technology-tablet.jpg);
         align-items: center;
-        overflow-x: hidden;
+        overflow-y: visible;
     }
 
     .tech_info{
@@ -1913,171 +1913,377 @@ nav{
 }
 
 @media only screen and (min-width: 521px) and (max-width: 1000px){
+
     .tech_page{
-        background-image: url(/public/assets/images/techDesktop.jpg);
-        align-items: center;
-        overflow-x: hidden;
-    }
-
-    .tech_info{
-        align-items: center;
-    }
-
-    .tech_intro{
+        position: relative;
+        width: 100%;
+        min-height: 150vh;
         display: flex;
-        justify-content: left;
-        left: 2rem;
-        top: 6rem;
+        overflow-y: visible;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/public/assets/images/techDesktop.jpg);
     }
-
+    
+    .tech_info{
+        position: relative;
+        width: 100%;
+    }
+    
     .technology{
+        position: relative;
+        width:100%;
+        left: 0;
+        top: 1rem;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        font-family: 'Barlow';
+        gap: 0;
+        margin-top: 4rem;
     }
 
+    .technology :nth-child(3){
+        order: -1;
+    }
+    
     .techs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
         flex-direction: row;
         margin: 0;
-        position: absolute;
-        top: 8rem;
-        margin: 0;
+        margin-right: 2rem;
     }
 
+    .techs :nth-child(1){
+        order: -1;
+    }
+
+    .techs :nth-child(3){
+        order: 3;
+    }
+    
     .tech_dot{
-        font-size: 16px;
-        height: 40px;
-        width: 40px;
+        text-align: center;
+        position: relative;
+        top: 2rem;
+        height: 50px;
+        width: 50px;
+        border: .5px solid rgb(53, 53, 53);
+        border-radius: 100%;
+        background:none;
+        cursor: pointer;
+        font-size: 1rem;
+        color: white;
     }
-
+    
+    .tech_dot:hover{
+        border-color: white;
+    }
+    
+    .techD{
+        background-color: white;
+        color: black;
+    }
+    
     .tech_description{
-        align-items: center;
-        top: 13rem;
-        margin: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 0;
+       align-items: center;
+       text-align: center;
+       top: 2rem;
     }
 
+    .tech_description :nth-child(1){
+        order: -2;
+    }
+    .tech_description :nth-child(2){
+        order: -2;
+    }
+    
     .terminology{
-        text-align: center;
-        margin: 0;
-    }
-
-    .tech_name{
-        text-align: center;
-        width: 327;
-        font-size: 24px;
-        margin: 1rem 0;
-    }
-
-    .tech_details{
-        text-align: center;
+        position: relative;
+        width: 327px;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
         font-size: 16px;
-        width: 458px;
-        line-height: 28px;
-        margin: 0;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+        margin-bottom: 0;
+        margin-top: 2rem;
     }
-
+    
+    .tech_name{
+        color: #FFF;
+        font-family: 'Bellefair';
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        width: 532px;
+    }
+    
+    .tech_details{
+        color: #D0D6F9;
+        font-family: 'Barlow';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        width: 444px;
+        height: 192px;
+        margin-top: -5px;
+        position: relative;
+    }
+    
     .tech_image{
-        position: absolute;
-        top: -10rem;
-        width: 100vw;
-        height: 32vh;
-        margin: 0;
+        position: relative;
+        width:100%;
+        max-width: 700px;
+        height: 300px;
     }
 }
 
 @media only screen and (min-width: 1001px) and (max-width: 1600px){
     .tech_page{
-        background-image: url(/public/assets/images/techDesktop.jpg);
-        align-items: center;
-        overflow-x: hidden;
-    }
-
-    .tech_info{
-        align-items: center;
-        top: 5rem;
-    }
-
-    .tech_intro{
+        position: relative;
+        width: 100%;
+        min-height: 150vh;
         display: flex;
         justify-content: center;
-        left: 4rem;
-        top: 8rem;
+        overflow-y: visible;
     }
-
+    
+    .tech_info{
+        position: relative;
+       width: 100%;
+       min-height: 100vh;
+    }
+    
     .technology{
-        flex-direction: column;
+        position: relative;
+        left: 0;
+        top: 4rem;
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        font-family: 'Barlow';
+        flex-direction: column;
+        gap: 0;
     }
 
+    .technology :nth-child(3){
+        order: 2;
+    }
+    
     .techs{
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
         flex-direction: row;
         margin: 0;
-        position: absolute;
-        top: 8rem;
-        margin: 0;
+        margin-bottom: 2rem;
     }
-
+    
     .tech_dot{
-        font-size: 16px;
-        height: 40px;
-        width: 40px;
+        text-align: center;
+        position: relative;
+        height: 80px;
+        width: 80px;
+        border: .5px solid rgb(53, 53, 53);
+        border-radius: 100%;
+        background:none;
+        cursor: pointer;
+        flex-shrink: 0;
+        font-size: 1.4rem;
+        color: white;
     }
-
+    
+    .tech_dot:hover{
+        border-color: white;
+    }
+    
+    .techD{
+        background-color: white;
+        color: black;
+    }
+    
     .tech_description{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        top: 13rem;
-        margin: 0;
+        margin-right: 0;
+        text-align: center;
     }
-
+    
     .terminology{
-        text-align: center;
-        margin: 0;
-    }
-
-    .tech_name{
-        text-align: center;
-        width: 327;
-        font-size: 24px;
-        margin: 1rem 0;
-    }
-
-    .tech_details{
-        text-align: center;
+        position: relative;
+        width: 327px;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
         font-size: 16px;
-        width: 458px;
-        line-height: 28px;
-        margin: 0;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+        margin-bottom: 0;
+        text-align: center;
     }
-
+    
+    .tech_name{
+        color: #FFF;
+        font-family: 'Bellefair';
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        width: 532px;
+    }
+    
+    .tech_details{
+        color: #D0D6F9;
+        font-family: 'Barlow';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        width: 444px;
+        height: 192px;
+        margin-top: -5px;
+        position: relative;
+        text-align: center;
+    }
+    
     .tech_image{
-        position: absolute;
-        top: -15rem;
-        width: 700px;
-        height: 300px;
-        margin: 0;
+        position: relative;
+        width: 40rem;
+        height: 500px;
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape){
-    .tech_image{
-        height: 18rem;
+@media only screen and (min-width: 1601px) and (max-width: 1900px){
+    .tech_page{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
+    
+    .tech_info{
+        position: relative;
+        width: 100%;
+    }
+    
+    .technology{
+        position: relative;
+        left: 0;
+        top: 8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Barlow';
+        gap: 7rem;
+    }
+    
     .techs{
-        top: 10rem;
-        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-direction: column;
+       margin: 0;
     }
-
+    
+    .tech_dot{
+        text-align: center;
+        position: relative;
+        height: 80px;
+        width: 80px;
+        border: .5px solid rgb(53, 53, 53);
+        border-radius: 100%;
+        background:none;
+        cursor: pointer;
+        flex-shrink: 0;
+        font-size: 1.4rem;
+        color: white;
+    }
+    
+    .tech_dot:hover{
+        border-color: white;
+    }
+    
+    .techD{
+        background-color: white;
+        color: black;
+    }
+    
     .tech_description{
-        top: 16rem;
-        margin: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 7rem;
     }
-
+    
     .terminology{
-        top: -1rem;
+        position: relative;
+        width: 327px;
+        color: #D0D6F9;
+        font-family: 'Barlow Condensed';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+        margin-bottom: -2rem;
     }
-
+    
+    .tech_name{
+        color: #FFF;
+        font-family: 'Bellefair';
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        width: 532px;
+    }
+    
     .tech_details{
-        top: .5rem;
+        color: #D0D6F9;
+        font-family: 'Barlow';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        width: 444px;
+        height: 192px;
+        margin-top: -5px;
+        position: relative;
+    }
+    
+    .tech_image{
+        position: relative;
+        width: 40rem;
+        height: 500px;
     }
 }
 
